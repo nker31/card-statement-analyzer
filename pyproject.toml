@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "card-statement-analyzer"
+version = "0.1.0"
+description = "A privacy-first parser, categorizer, and audit tool for Thai credit card statements (ttb, UOB, KBank, SCB)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Nathat Kuanthanom", email = "nathatkuan.dev@gmail.com" }
+]
+keywords = [
+    "credit-card",
+    "statement-analyzer",
+    "personal-finance",
+    "thailand",
+    "banking",
+    "antigravity-skill"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Financial and Insurance Industry",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Accounting"
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0"
+]
+
+[project.scripts]
+card-statement-analyzer = "card_statement_analyzer.cli:main"
